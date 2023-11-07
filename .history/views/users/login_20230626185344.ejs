@@ -1,0 +1,66 @@
+<!-- <% include ('../layouts/header.ejs') %>
+
+<h1>Login</h1>
+
+<%
+    if(typeof message !== 'undefined'){
+        %>
+        <h4><%= message %></h4>
+        <%
+
+    }
+
+    %>
+
+<form action="/login" method="post">
+
+    <input type="email" name="email" required placeholder="Enter email" aria-label="email">
+    <br><br>
+    <input type="password" name="password" required placeholder="Enter password" aria-label="Enter password">
+    <br><br>
+    <input type="submit" value="Login" aria-label="login">
+    
+</form>
+
+<a href="/verification">Verification</a> 
+
+<% include ('../layouts/footer.ejs') %> -->
+
+
+<%-include ('../layouts/header.ejs') %>
+<h1>Login</h1>
+<%
+if (typeof message !== 'undefined') {
+%>
+<h4><%= message %></h4>
+<%
+}
+%>
+
+
+  
+  <title>Login Page Design</title>
+</head>
+<body>
+  <div class="kotakForm">
+    <div class="kotakLogin">
+      <div class="headerLogin">
+        <div class="formDiv">
+          <!--  Form Login -->
+          <form action="/login" method="post">
+            <input type="email" name="email" required placeholder="Enter email" aria-label="email" required/><i class="fa-solid fa-user"></i><br>
+            <input type="password" name="password" required placeholder="Enter password" aria-label="Enter password" required/><i class="fa-solid fa-lock"></i><br>
+            <input type="submit" value="Login" aria-label="login">
+          </form>
+        </div>
+        <!-- navigasi register -->
+        <p>Tidak memiliki akun? <a href="#daftar">Daftar Sekarang!</a></p>
+        <a href="/verification">Verification</a>
+      </div>
+    </div>
+  </div>   
+</body>
+</html>
+
+
+<% include ('../layouts/footer.ejs') %>

@@ -1,0 +1,89 @@
+<%- include('../layouts/header.ejs') %>
+
+<section class="vh-100" style="background-color: #2b8388c2;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-8">
+
+        <h1 class="text-white mb-4">Registration Form</h1>
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body">
+
+            <form action="" method="post" enctype="multipart/form-data">
+
+              <div class="row align-items-center py-2">
+                <div class="col-md-3 ps-4">
+                  <h6 class="mb-0">Full name</h6>
+                </div>
+                <div class="col-md-9">
+                  <input name="name" placeholder="Enter name" aria-label="name" class="form-control" required/>
+                </div>
+              </div>
+
+              <hr class="mx-n3">
+
+              <div class="row align-items-center py-2">
+                <div class="col-md-3 ps-4">
+                  <h6 class="mb-0">Email address</h6>
+                </div>
+                <div class="col-md-9">
+                  <input type="email" name="email" placeholder="Enter Email" aria-label="email" class="form-control" required/>
+                </div>
+              </div>
+
+              <hr class="mx-n3">
+
+              <div class="row align-items-center py-2">
+                <div class="col-md-3 ps-4">
+                  <h6 class="mb-0">Mobile</h6>
+                </div>
+                <div class="col-md-9">
+                  <input type="text" name="mno" placeholder="Enter Mobile" aria-label="mobile" class="form-control" required/>
+                </div>
+              </div>
+
+              <hr class="mx-n3">
+
+              <div class="row align-items-center py-2">
+                <div class="col-md-3 ps-4">
+                  <h6 class="mb-0">Upload Image</h6>
+                </div>
+                <div class="col-md-9">
+                  <input type="file" name="image" aria-label="image" class="form-control" required/>
+                  <div class="small text-muted mt-2">Upload your image or any other relevant file. Max file size 50 MB</div>
+                </div>
+              </div>
+
+              <hr class="mx-n3">
+
+              <div class="row align-items-center py-2">
+                <div class="col-md-3 ps-4">
+                  <h6 class="mb-0">Password</h6>
+                </div>
+                <div class="col-md-9">
+                  <input type="password" name="password" placeholder="Enter Password" aria-label="password" class="form-control" required/>
+                </div>
+              </div>
+
+              <hr class="mx-n3">
+
+              <div class="px-4 py-3">
+                <input type="submit" value="Register" aria-label="register" class="btn btn-primary btn-lg justify-content-center">
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <%=(typeof message!=='undefined')?message:""%>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../layouts/footer.ejs') %>

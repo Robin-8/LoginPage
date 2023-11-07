@@ -1,0 +1,25 @@
+<% include ('../layouts/header.ejs') %>
+
+<h1>Edit User</h1>
+
+
+<form action="" method="post">
+
+    <input type="name"  name="name" placeholder="Enter Name" aria-label="name" value="<%= user.name %>" required>
+    <br><br>
+    <input type="email"  name="email" placeholder="Enter Email" aria-label="email" value="<%= user.email %>" required>
+    <br><br>
+    <input type="text"  name="mno" placeholder="Enter Mobile" aria-label="mno" value="<%= user.mobile %>" required >
+    <br><br>
+    <label>Verified</label>
+    <input type="radio" name="verify" value="1" aria-label="verify" <% if()%>>
+    <label>Unverified</label>
+    <input type="radio" name="verify" value="0" aria-label="verify">
+    <br><br>
+    <input type="submit"  value="Update User" aria-label="Login">
+
+</form>
+
+<a href="/admin/">Go Dashboard</a>
+<% include('../layouts/footer.ejs') %>
+
